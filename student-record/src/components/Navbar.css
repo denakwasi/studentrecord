@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Navbar {
+    width: 100%;
+    height: 60px;
+    background-color: green;
+    position: sticky;
+    padding: 2px 5px;
+    top: 0;
+    z-index: 5;
+}
+
+.items__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.items__wrapper li a.is-active {
+    text-decoration: underline 4px yellow;
+}
+
+.items__wrapper ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 800;
+}
+
+.items__wrapper ul li:last-child {
+    position: relative;
+}
+
+.items__wrapper ul li:last-child svg {
+    position: absolute;
+    right: -14px;
+    top: 18px;
+}
+
+
+.items__wrapper ul li {
+    list-style: none;
+}
+
+.items__wrapper ul li:first-child {
+    margin-right: auto;
+}
+
+.items__wrapper ul li:last-child {
+    margin-right: 5px;
+}
+
+.items__wrapper ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.items__wrapper .submit, .items__wrapper .logout, .items__wrapper .dashboard, .items__wrapper .profile {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    background: orangered;
+}
+
+.items__wrapper .submit .under {
+    margin-top: 0;
+    width: 0px;
+    height: 4px;
+    background: yellow;
+}
+
+.items__wrapper .dashboard .under1 {
+    margin-top: 0;
+    width: 0px;
+    height: 4px;
+    background: yellow;
+}
+
+
+.items__wrapper .logout .under2 {
+    width: 0px;
+    height: 4px;
+    background: yellow;
+}
+
+.items__wrapper .profile .under3 {
+    width: 0px;
+    height: 4px;
+    background: yellow;
+}
+
+.items__wrapper .profile:hover .under3 {
+    width: 55px;
+    transition: 0.2s;
+}
+
+.items__wrapper .profile .under4 {
+    width: 0px;
+    height: 4px;
+    background: yellow;
+}
+
+.items__wrapper .profile:hover .under4 {
+    width: 42px;
+    transition: 0.2s;
+}
+
+.items__wrapper .submit:hover .under {
+    width: 48px;
+    transition: 0.2s;
+}
+
+.items__wrapper .dashboard:hover .under1 {
+    width: 81px;
+    transition: 0.2s;
+}
+
+
+.items__wrapper .logout:hover .under2 {
+    width: 54px;
+    transition: 0.2s;
+}

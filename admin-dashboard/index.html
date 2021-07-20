@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                        <a href="#">
+                        <span class="icon"><i class="fa fa-apple" aria-hidden="true"></i></span>
+                        <span class="title">Brand Name</span>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                    <span class="title">Customers</span>
+                </li>
+                </a>
+                <a href="#">
+                <li>
+                    <span class="icon"><i class="fa fa-comment" aria-hidden="true"></i></span>
+                    <span class="title">Message</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                    <span class="title">Help</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                    <span class="title">Password</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                    <span class="title">Setting</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Sign out</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu()"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                </div>
+                <div class="user" onclick="menuToggle(event)">
+                    <img src="./user.jpg" alt="">
+                </div>
+                <div class="menu">
+                    <h3>Someone Famous<br><span>Website Designer</span></h3>
+                    <ul>
+                        <li onclick="hello()"><i class="fa fa-user" aria-hidden="true"></i>My Profile</li>
+                        <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit Profile</li>
+                        <li><i class="fa fa-cog" aria-hidden="true"></i>Settings</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>Inbox</li>
+                        <li><i class="fa fa-sign-in" aria-hidden="true"></i>Log out</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cardBox">
+                
+            </div>
+            <div class="details">
+                <div class="recentOrder">
+                    
+                </div>
+
+                <div class="recentCustomers">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function toggleMenu() {
+        let toggle = document.querySelector(".toggle")
+        let navigation = document.querySelector(".navigation")
+        let main = document.querySelector(".main")
+        toggle.classList.toggle("active")
+        navigation.classList.toggle("active")
+        main.classList.toggle("active")
+    }
+
+    function menuToggle(event) {
+        const toggleMenu = document.querySelector(".menu")
+        toggleMenu.classList.toggle("active")
+        event.stopPropagation()
+    }
+
+    document.querySelector("body").addEventListener("click", ()=> {
+        const toggleMenu = document.querySelector(".menu")
+        toggleMenu.classList.remove("active")
+    })
+
+    function hello() {
+        console.log("profile")
+    }
+</script>
+</body>
+</html>

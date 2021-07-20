@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Russo+One&family=Staatliches&display=swap');
+
+:root {
+    --border: 1px solid rgba(0,0,0,0.1);
+    --box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Admin {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 10px;
+    border-top: 4px solid #f0f0f0;
+    background: #f8f8f8;
+    position: relative;
+}
+
+.Admin .create__std__fields input  {
+    background: black !important;
+}
+
+.Admin .courses {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.Admin .search__course__wrapper {
+    width: 100%;
+    height: 50px;
+    background: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.Admin .search__course__wrapper .tools__wrapper select {
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.Admin .search__course__wrapper .tools__wrapper select:focus {
+    border: 2px solid rgb(127, 127, 223);
+}
+
+.Admin .search__course__wrapper .tools__wrapper {
+    position: relative;
+}
+
+.Admin .search__course__wrapper .tools__wrapper > svg {
+    position: absolute;
+    right: -25px;
+    top: -12px;
+    background: blue;
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.Admin .search__course__wrapper .search__course {
+    width: 300px;
+    height: 40px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+    border-radius: 20px;
+    position: relative;
+}
+
+.Admin .search__course__wrapper .search__course input {
+    max-width: 300px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    
+}
+
+.Admin .search__course__wrapper .search__course input:focus {
+    border: 2px solid rgb(115, 115, 207);
+}
+
+.Admin .search__course__wrapper .search__course::before {
+    content: "\f002";
+    position: absolute;
+    font-family: fontAwesome;
+    z-index: 1;
+    left: 8px;
+    top: 8px;
+}
+
+.Admin .courses .course__card__wrapper {
+    position: relative;
+}
+
+.Admin .courses .course__card__wrapper > svg {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    cursor: pointer;
+}
+
+.Admin .courses .course__card__wrapper .course__options {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: rgba(0,0,0,0.2);
+    z-index: 5;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    right: 10px;
+    top: 25px;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.25);
+}
+
+.Admin .courses .course__card__wrapper .course__options > svg {
+    cursor: pointer;
+}
+
+.Admin .courses .course__card {
+    height: 100px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 2px;
+    background: white;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-family: 'Staatliches', cursive;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.Admin .courses .course__card div:nth-child(1) {
+    color: black;
+    font-weight: 800;
+}
+
+.Admin .courses .course__card div:nth-child(2) {
+    color: rgba(0,0,0,0.5);
+}
+
+.Admin .courses .course__card div:nth-child(3) {
+    color: rgba(0,0,0,0.5);
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.Admin .students {
+    margin-top: 40px;
+    width: 100%;
+    min-height: 100px;
+    height:100vh;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+}
+
+.Admin .search__course__wrapper__main {
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: calc(60px - 10px);
+    z-index: 2;
+}
+
+.Admin .students .searchbar__wrapper {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+}
+
+.Admin .students .searchbar__wrapper .searchbar {
+    max-width: 300px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+.Admin .students .searchbar__wrapper .searchbar input {
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 30px;
+}
+
+.Admin .students .searchbar__wrapper .searchbar::before {
+    content: "\f002";
+    position: absolute;
+    font-family: fontAwesome;
+    z-index: 1;
+    left: 8px;
+    top: 8px;
+}
+
+.Admin .students .searchbar__wrapper .searchbar input:focus {
+    border: 2px solid rgb(115, 115, 207);
+}
+
+.Admin .students .create__std {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.Admin .students .img__name {
+    display: flex;
+    gap: 5px;
+}
+
+.Admin .students td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
+.Admin .students .cont {
+    background: white;
+    font-size: 0.8em;
+}
+
+.Admin .students .cont .options {
+    background: wheat !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Admin .students .header {
+    text-transform: uppercase;
+}
+
+.Admin .students td svg {
+    cursor: pointer;
+}
+
+.Admin .students td svg:first-child {
+    margin-right: 10px;
+}
+
+.Admin footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background: wheat;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.Admin .modal__wrapper .overlay {
+    /* position: absolute; */
+    background: royalblue;
+    width: 100px;
+    height: 100px;
+    
+}
+
